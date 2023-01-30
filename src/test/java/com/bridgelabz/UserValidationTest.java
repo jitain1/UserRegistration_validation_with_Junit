@@ -13,48 +13,48 @@ public class UserValidationTest {
 	}
 	@Test
 	public void givenFirstName_whenValid_shouldReturnTrue() {
-		boolean result = userValidation.validateFirstName("Sourav");
+		boolean result = userValidation.validateFirstName("Jitain");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenFirstName_whenInvalid_shouldReturnFalse() {
-		boolean result = userValidation.validateFirstName("sourav");
+		boolean result = userValidation.validateFirstName("jitain");
 		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void givenLastName_whenValid_shouldReturnTrue() {
-		boolean result = userValidation.validateLastName("Pal");
+		boolean result = userValidation.validateLastName("Singh");
 		Assert.assertEquals(true, result);
 	}
 
 	@Test
 	public void givenLastName_whenInvalid_shouldReturnFalse() {
-		boolean result = userValidation.validateLastName("pal");
+		boolean result = userValidation.validateLastName("singh");
 		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void givenEmail_whenValid_shouldReturnTrue() {
-		boolean result = userValidation.validateEmail("spalworks.vj@gmail.com.vj");
+		boolean result = userValidation.validateEmail("singhjitainj.sj@gmail.com.sj");
 		Assert.assertEquals(true, result);
 	}
 	@Test
 	public void givenEmail_whenInvalid_shouldReturnFalse() {
-		boolean result = userValidation.validateEmail("spalworks.@gmail.com");
+		boolean result = userValidation.validateEmail("singhjitainj.@gmail.com");
 		Assert.assertEquals(false, result);
 	}
 	
 	@Test
 	public void givenMobileNumber_whenValid_shouldReturnTrue() {
-		boolean result = userValidation.validateMobileNumber("+91 9876543210");
+		boolean result = userValidation.validateMobileNumber("+91 7982468895");
 		Assert.assertEquals(true, result);
 	}
 	
 	@Test
 	public void givenMobileNumber_whenInvalid_shouldReturnFalse() {
-		boolean result = userValidation.validateMobileNumber("+919876543210");
+		boolean result = userValidation.validateMobileNumber("+917982468895");
 		Assert.assertEquals(false, result);
 	}
 	
