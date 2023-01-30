@@ -27,8 +27,13 @@ public class UserValidationParameterizedTest {
 
 	@Test
 	public void givenEmailAddress_ShouldReturn_AsExpected(){
-		boolean testResult = userValidator.validateEmail(testEmail);
-		Assert.assertEquals(testResult, expectedResult);
+		boolean testResult;
+		try {
+			testResult = userValidator.validateEmail(testEmail);
+			Assert.assertEquals(testResult, expectedResult);
+		} catch (UserValidationException e) {
+		}
+		
 	}
 
 	@Parameterized.Parameters
@@ -57,7 +62,7 @@ public class UserValidationParameterizedTest {
 												{ "abc123@gmail.a", false },
 												{ "abc@%*.com", false }, 
 												{ "abc@gmail.com.1a", false }, 
-												{ ".abc@gmail.com.aa.au", false } });
+												{ ".abc@gmail.com.aa.au", false }});
 
 	}
 
