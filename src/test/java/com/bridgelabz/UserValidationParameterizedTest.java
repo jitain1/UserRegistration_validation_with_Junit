@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+//Parameterized Test Case To Validate All Emails
+
 @RunWith(Parameterized.class)
 public class UserValidationParameterizedTest {
 
@@ -30,7 +32,7 @@ public class UserValidationParameterizedTest {
 		boolean testResult = userValidator.validateEmail(testEmail);
 		Assert.assertEquals(testResult, expectedResult);
 	}
-
+    
 	@Parameterized.Parameters
 	public static Collection input() {
 
